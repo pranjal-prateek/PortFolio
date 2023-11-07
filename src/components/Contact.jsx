@@ -44,13 +44,13 @@ const Contact = () => {
           to_email: "pranjalprateek0903@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        "FQQF7exGG7rzoxdWZ"
       )
       .then(
         () => {
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
-
+console.log("sent")
           setForm({
             name: "",
             email: "",
@@ -60,7 +60,7 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.error(error);
-
+          console.log("not sent ");
           alert("Ahh, something went wrong. Please try again.");
         }
       );
